@@ -31,10 +31,15 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallAdobe",
+	"InstallSumatraPDF", 			#"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
-	"InstallMediaPlayerClassic",
+	#"InstallMediaPlayerClassic",
+	"InstallGit",
+	"InstallLibreOffice",
+	"InstallLinuxSubsystem",
+	"InstallNextcloudC",
+	"InstallPython",
 
 	### Windows Apps
 	"DebloatAll",
@@ -42,7 +47,7 @@ $tweaks = @(
 	### Privacy Tweaks ###
 	"DisableTelemetry",             # "EnableTelemetry",
 	"DisableWiFiSense",             # "EnableWiFiSense",
-	"DisableSmartScreen",         # "EnableSmartScreen",
+	"DisableSmartScreen",         	# "EnableSmartScreen",
 	"DisableWebSearch",             # "EnableWebSearch",
 	"DisableAppSuggestions",        # "EnableAppSuggestions",
 	"DisableActivityHistory",       # "EnableActivityHistory",
@@ -54,67 +59,67 @@ $tweaks = @(
 	"DisableAdvertisingID",         # "EnableAdvertisingID",
 	"DisableCortana",               # "EnableCortana",
 	"DisableErrorReporting",        # "EnableErrorReporting",
-	"SetP2PUpdateLocal",          # "SetP2PUpdateInternet",
+	"SetP2PUpdateLocal",          	# "SetP2PUpdateInternet",
 	"DisableDiagTrack",             # "EnableDiagTrack",
 	"DisableWAPPush",               # "EnableWAPPush",
 
 	### Security Tweaks ###
-	"SetUACLow",                  # "SetUACHigh",
+	"SetUACLow",                  	# "SetUACHigh",
 	# "EnableSharingMappedDrives",  # "DisableSharingMappedDrives",
-	# "DisableAdminShares",           # "EnableAdminShares",
-	"DisableSMB1",                # "EnableSMB1",
+	# "DisableAdminShares",         # "EnableAdminShares",
+	"DisableSMB1",                	# "EnableSMB1",
 	# "DisableSMBServer",           # "EnableSMBServer",
 	# "DisableLLMNR",               # "EnableLLMNR",
 	"SetCurrentNetworkPrivate",     # "SetCurrentNetworkPublic",
-	"SetUnknownNetworksPrivate",  # "SetUnknownNetworksPublic",
-	"DisableNetDevicesAutoInst",  # "EnableNetDevicesAutoInst",
-	"DisableCtrldFolderAccess",	# "EnableCtrldFolderAccess",
+	"SetUnknownNetworksPrivate",  	# "SetUnknownNetworksPublic",
+	"DisableNetDevicesAutoInst",  	# "EnableNetDevicesAutoInst",
+	#"DisableCtrldFolderAccess",	# "EnableCtrldFolderAccess",
 	# "DisableFirewall",            # "EnableFirewall",
-	"DisableDefender",            # "EnableDefender",
-	"DisableDefenderCloud",       # "EnableDefenderCloud",
+	#"DisableDefender",            	# "EnableDefender",
+	#"DisableDefenderCloud",       	# "EnableDefenderCloud",
 	"EnableF8BootMenu",             # "DisableF8BootMenu",
-	#"SetDEPOptOut",                 # "SetDEPOptIn",
+	#"SetDEPOptOut",                # "SetDEPOptIn",
 	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
-	#"DisableScriptHost",            # "EnableScriptHost",
-	#"EnableDotNetStrongCrypto",     # "DisableDotNetStrongCrypto",
-	"DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"    
+	#"DisableScriptHost",           # "EnableScriptHost",
+	#"EnableDotNetStrongCrypto",    # "DisableDotNetStrongCrypto",
+	"DisableMeltdownCompatFlag", 	# "EnableMeltdownCompatFlag"    
 
 	### Service Tweaks ###
-	"DisableUpdateMSRT",          # "EnableUpdateMSRT",
-	"DisableUpdateDriver",        # "EnableUpdateDriver",
-	"DisableUpdateRestart",         # "EnableUpdateRestart",
-	"DisableHomeGroups",          # "EnableHomeGroups",
+	#"DisableUpdateMSRT",          	# "EnableUpdateMSRT",
+	#"DisableUpdateDriver",        	# "EnableUpdateDriver",
+	#"DisableUpdateRestart",        # "EnableUpdateRestart",
+	"DisableHomeGroups",          	# "EnableHomeGroups",
 	"DisableSharedExperiences",     # "EnableSharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
 	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
 	"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
-	"DisableStorageSense",        # "EnableStorageSense",
-	"DisableDefragmentation",     # "EnableDefragmentation",
-	"DisableSuperfetch",          # "EnableSuperfetch",
-	"DisableIndexing",            # "EnableIndexing",
-	"SetBIOSTimeUTC",             # "SetBIOSTimeLocal",
-	"DisableHibernation",		# "EnableHibernation",          # 
-	"EnableSleepButton",		# "DisableSleepButton",         
-	"DisableSleepTimeout",        # "EnableSleepTimeout",
-	# "DisableFastStartup",         # "EnableFastStartup",
+	"DisableStorageSense",        	# "EnableStorageSense",
+	"DisableDefragmentation",     	# "EnableDefragmentation",
+	"DisableSuperfetch",          	# "EnableSuperfetch",
+	"DisableIndexing",            	# "EnableIndexing",
+	#"SetBIOSTimeUTC",             	# "SetBIOSTimeLocal",
+	#"DisableHibernation",			# "EnableHibernation",
+	"EnableSleepButton",			# "DisableSleepButton",         
+	#"DisableSleepTimeout",        	# "EnableSleepTimeout",
+	"EnableFastStartup",			# "DisableFastStartup",          
 
 	### UI Tweaks ###
 	"DisableActionCenter",          # "EnableActionCenter",
 	"DisableLockScreen",            # "EnableLockScreen",
-	"DisableLockScreenRS1",       # "EnableLockScreenRS1",
-	# "HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
-	# "HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
+	"DisableLockScreenRS1",       	# "EnableLockScreenRS1",
+	# "HideNetworkFromLockScreen",  # "ShowNetworkOnLockScreen",
+	# "HideShutdownFromLockScreen", # "ShowShutdownOnLockScreen",
 	"DisableStickyKeys",            # "EnableStickyKeys",
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
-	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",    
-	#"HideTaskbarSearch",
-	"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
+	"DisableFileDeleteConfirm",		# "EnableFileDeleteConfirm",    
+	"HideTaskbarSearch",
+	"ShowTaskbarSearchIcon",      	# "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
-	# "ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
-	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
-	# "HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
+	# "ShowSmallTaskbarIcons",      # "ShowLargeTaskbarIcons",
+	# "SetTaskbarCombineWhenFull",  # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
+	# "HideTaskbarPeopleIcon",      # "ShowTaskbarPeopleIcon",
 	"ShowTrayIcons",                # "HideTrayIcons",
 	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
@@ -127,47 +132,47 @@ $tweaks = @(
 
 	### Explorer UI Tweaks ###
 	"ShowKnownExtensions",          # "HideKnownExtensions",
-	# "ShowHiddenFiles",              # "HideHiddenFiles",
+	"ShowHiddenFiles",            	# "HideHiddenFiles",
 	"HideSyncNotifications"         # "ShowSyncNotifications",
-	# "HideRecentShortcuts",          # "ShowRecentShortcuts",
+	"HideRecentShortcuts",        	# "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
-	"HideThisPCFromDesktop",	# "ShowThisPCOnDesktop",
-	# "ShowUserFolderOnDesktop",    # "HideUserFolderFromDesktop",
-	# "HideDesktopFromThisPC",        # "ShowDesktopInThisPC",
-	# "HideDesktopFromExplorer",    # "ShowDesktopInExplorer",
-	# "HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
+	"HideThisPCFromDesktop",		# "ShowThisPCOnDesktop",
+	"ShowUserFolderOnDesktop",    	# "HideUserFolderFromDesktop",
+	"HideDesktopFromThisPC",      	# "ShowDesktopInThisPC",
+	"HideDesktopFromExplorer",    	# "ShowDesktopInExplorer",
+	# "HideDocumentsFromThisPC",    # "ShowDocumentsInThisPC",
 	# "HideDocumentsFromExplorer",  # "ShowDocumentsInExplorer",
-	# "HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
+	# "HideDownloadsFromThisPC",    # "ShowDownloadsInThisPC",
 	# "HideDownloadsFromExplorer",  # "ShowDownloadsInExplorer",
-	"HideMusicFromThisPC",          # "ShowMusicInThisPC",
-	"HideMusicFromExplorer",      # "ShowMusicInExplorer",
-	# "HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
+	# "HideMusicFromThisPC",        # "ShowMusicInThisPC",
+	# "HideMusicFromExplorer",    	# "ShowMusicInExplorer",
+	# "HidePicturesFromThisPC",     # "ShowPicturesInThisPC",
 	# "HidePicturesFromExplorer",   # "ShowPicturesInExplorer",
-	"HideVideosFromThisPC",         # "ShowVideosInThisPC",
-	"HideVideosFromExplorer",     # "ShowVideosInExplorer",
-	"Hide3DObjectsFromThisPC",      # "Show3DObjectsInThisPC",
-	"Hide3DObjectsFromExplorer",  # "Show3DObjectsInExplorer",
+	# "HideVideosFromThisPC",       # "ShowVideosInThisPC",
+	# "HideVideosFromExplorer",    	# "ShowVideosInExplorer",
+	# "Hide3DObjectsFromThisPC",    # "Show3DObjectsInThisPC",
+	# "Hide3DObjectsFromExplorer", 	# "Show3DObjectsInExplorer",
 	# "DisableThumbnails",          # "EnableThumbnails",
-	# "DisableThumbsDB",              # "EnableThumbsDB",
+	# "DisableThumbsDB",            # "EnableThumbsDB",
 
 	### Application Tweaks ###
 	"DisableOneDrive",              # "EnableOneDrive",
 	"UninstallOneDrive",            # "InstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
-	# "UninstallWindowsStore",      # "InstallWindowsStore",
-	# "DisableXboxFeatures",          # "EnableXboxFeatures",
+	"UninstallWindowsStore",      	# "InstallWindowsStore",
+	"DisableXboxFeatures",        	# "EnableXboxFeatures",
 	"DisableAdobeFlash",            # "EnableAdobeFlash",
-	"InstallMediaPlayer", 		# "UninstallMediaPlayer",
-	"UninstallInternetExplorer",  # "InstallInternetExplorer",
-	"UninstallWorkFolders",       # "InstallWorkFolders",
-	"InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
+	# "InstallMediaPlayer", 		# "UninstallMediaPlayer",
+	"UninstallInternetExplorer",  	# "InstallInternetExplorer",
+	"UninstallWorkFolders",       	# "InstallWorkFolders",
+	"InstallLinuxSubsystem",      	# "UninstallLinuxSubsystem",
 	# "InstallHyperV",              # "UninstallHyperV",
 	"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
 	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
-	"InstallPDFPrinter",		# "UninstallPDFPrinter",
-	# "UninstallXPSPrinter",          # "InstallXPSPrinter",
-	# "RemoveFaxPrinter",             # "AddFaxPrinter",
+	"InstallPDFPrinter",			# "UninstallPDFPrinter",
+	"UninstallXPSPrinter",        # "InstallXPSPrinter",
+	# "RemoveFaxPrinter",           # "AddFaxPrinter",
 
 	### Server Specific Tweaks ###
 	# "HideServerManagerOnLogin",   # "ShowServerManagerOnLogin",
@@ -196,7 +201,7 @@ Function InstallTitusProgs {
 	choco install chocolatey-core.extension -y
 	Write-Output "Running O&O Shutup with Recommended Settings"
 	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/Toorero/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
 	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
@@ -208,7 +213,7 @@ Function InstallAdobe {
 
 Function InstallJava {
 	Write-Output "Installing Java"
-	choco install jre8 -y
+	choco install openjdk -y
 }
 
 Function Install7Zip {
@@ -224,6 +229,31 @@ Function InstallNotepadplusplus {
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
+}
+
+Function InstallSumatraPDF {
+	Write-Output "Installing SumatraPDF"
+	choco install sumatrapdf -y
+}
+
+Function InstallGit {
+	Write-Output "Installing git"
+	choco install git -y
+}
+
+Function InstallLibreOffice {
+	Write-Output "Installing LibreOffice"
+	choco install libreoffice-fresh -y
+}
+
+Function InstallNextcloudC {
+	Write-Output "Installing Nextcloud"
+	choco  install nextcloud-client -y
+}
+
+Function InstallPython {
+	Write-Output "Installing python3"
+	choco install python3 -ycho
 }
 
 ##########
