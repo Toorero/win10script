@@ -31,15 +31,19 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallSumatraPDF", 			#"InstallAdobe",
-	"Install7Zip",
-	"InstallNotepadplusplus",
+	"InstallSumatraPDF",
+	"InstallAdobe",
+	"InstallFirefox",
+	"InstallVLC",
+	"InstallKeepassXC",
+	#"Install7Zip",
+	#"InstallNotepadplusplus",
 	#"InstallMediaPlayerClassic",
-	"InstallGit",
-	"InstallLibreOffice",
-	"InstallLinuxSubsystem",
+	#"InstallGit",
+	#"InstallLibreOffice",
+	#"InstallLinuxSubsystem",
 	"InstallNextcloudC",
-	"InstallPython",
+	#"InstallPython",
 
 	### Windows Apps
 	"DebloatAll",
@@ -47,7 +51,7 @@ $tweaks = @(
 	### Privacy Tweaks ###
 	"DisableTelemetry",             # "EnableTelemetry",
 	"DisableWiFiSense",             # "EnableWiFiSense",
-	"DisableSmartScreen",         	# "EnableSmartScreen",
+	#"DisableSmartScreen",         	# "EnableSmartScreen",
 	"DisableWebSearch",             # "EnableWebSearch",
 	"DisableAppSuggestions",        # "EnableAppSuggestions",
 	"DisableActivityHistory",       # "EnableActivityHistory",
@@ -64,14 +68,14 @@ $tweaks = @(
 	"DisableWAPPush",               # "EnableWAPPush",
 
 	### Security Tweaks ###
-	"SetUACLow",                  	# "SetUACHigh",
+	#"SetUACLow",                  	# "SetUACHigh",
 	# "EnableSharingMappedDrives",  # "DisableSharingMappedDrives",
 	# "DisableAdminShares",         # "EnableAdminShares",
 	"DisableSMB1",                	# "EnableSMB1",
 	# "DisableSMBServer",           # "EnableSMBServer",
 	# "DisableLLMNR",               # "EnableLLMNR",
 	"SetCurrentNetworkPrivate",     # "SetCurrentNetworkPublic",
-	"SetUnknownNetworksPrivate",  	# "SetUnknownNetworksPublic",
+	#"SetUnknownNetworksPrivate",  	# "SetUnknownNetworksPublic",
 	"DisableNetDevicesAutoInst",  	# "EnableNetDevicesAutoInst",
 	#"DisableCtrldFolderAccess",	# "EnableCtrldFolderAccess",
 	# "DisableFirewall",            # "EnableFirewall",
@@ -82,7 +86,7 @@ $tweaks = @(
 	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
 	#"DisableScriptHost",           # "EnableScriptHost",
 	#"EnableDotNetStrongCrypto",    # "DisableDotNetStrongCrypto",
-	"DisableMeltdownCompatFlag", 	# "EnableMeltdownCompatFlag"    
+	#"DisableMeltdownCompatFlag", 	# "EnableMeltdownCompatFlag"    
 
 	### Service Tweaks ###
 	#"DisableUpdateMSRT",          	# "EnableUpdateMSRT",
@@ -91,11 +95,11 @@ $tweaks = @(
 	"DisableHomeGroups",          	# "EnableHomeGroups",
 	"DisableSharedExperiences",     # "EnableSharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
-	"DisableAutoplay",              # "EnableAutoplay",
-	"DisableAutorun",               # "EnableAutorun",
+	#"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	#"DisableAutoplay",              # "EnableAutoplay",
+	#"DisableAutorun",               # "EnableAutorun",
 	"DisableStorageSense",        	# "EnableStorageSense",
-	"DisableDefragmentation",     	# "EnableDefragmentation",
+	#"DisableDefragmentation",     	# "EnableDefragmentation",
 	"DisableSuperfetch",          	# "EnableSuperfetch",
 	"DisableIndexing",            	# "EnableIndexing",
 	#"SetBIOSTimeUTC",             	# "SetBIOSTimeLocal",
@@ -105,17 +109,17 @@ $tweaks = @(
 	"EnableFastStartup",			# "DisableFastStartup",          
 
 	### UI Tweaks ###
-	"DisableActionCenter",          # "EnableActionCenter",
-	"DisableLockScreen",            # "EnableLockScreen",
-	"DisableLockScreenRS1",       	# "EnableLockScreenRS1",
+	#"DisableActionCenter",          # "EnableActionCenter",
+	#"DisableLockScreen",            # "EnableLockScreen",
+	#"DisableLockScreenRS1",       	# "EnableLockScreenRS1",
 	# "HideNetworkFromLockScreen",  # "ShowNetworkOnLockScreen",
 	# "HideShutdownFromLockScreen", # "ShowShutdownOnLockScreen",
 	"DisableStickyKeys",            # "EnableStickyKeys",
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
-	"DisableFileDeleteConfirm",		# "EnableFileDeleteConfirm",    
+	#"DisableFileDeleteConfirm",		# "EnableFileDeleteConfirm",    
 	"HideTaskbarSearch",
-	"ShowTaskbarSearchIcon",      	# "ShowTaskbarSearchBox",
+	#"ShowTaskbarSearchIcon",      	# "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
 	# "ShowSmallTaskbarIcons",      # "ShowLargeTaskbarIcons",
 	# "SetTaskbarCombineWhenFull",  # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
@@ -132,14 +136,14 @@ $tweaks = @(
 
 	### Explorer UI Tweaks ###
 	"ShowKnownExtensions",          # "HideKnownExtensions",
-	"ShowHiddenFiles",            	# "HideHiddenFiles",
+	#"ShowHiddenFiles",            	# "HideHiddenFiles",
 	"HideSyncNotifications"         # "ShowSyncNotifications",
-	"HideRecentShortcuts",        	# "ShowRecentShortcuts",
+	#"HideRecentShortcuts",        	# "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
 	"HideThisPCFromDesktop",		# "ShowThisPCOnDesktop",
 	"ShowUserFolderOnDesktop",    	# "HideUserFolderFromDesktop",
-	"HideDesktopFromThisPC",      	# "ShowDesktopInThisPC",
-	"HideDesktopFromExplorer",    	# "ShowDesktopInExplorer",
+	#"HideDesktopFromThisPC",      	# "ShowDesktopInThisPC",
+	#"HideDesktopFromExplorer",    	# "ShowDesktopInExplorer",
 	# "HideDocumentsFromThisPC",    # "ShowDocumentsInThisPC",
 	# "HideDocumentsFromExplorer",  # "ShowDocumentsInExplorer",
 	# "HideDownloadsFromThisPC",    # "ShowDownloadsInThisPC",
@@ -150,8 +154,8 @@ $tweaks = @(
 	# "HidePicturesFromExplorer",   # "ShowPicturesInExplorer",
 	# "HideVideosFromThisPC",       # "ShowVideosInThisPC",
 	# "HideVideosFromExplorer",    	# "ShowVideosInExplorer",
-	# "Hide3DObjectsFromThisPC",    # "Show3DObjectsInThisPC",
-	# "Hide3DObjectsFromExplorer", 	# "Show3DObjectsInExplorer",
+	"Hide3DObjectsFromThisPC",    # "Show3DObjectsInThisPC",
+	"Hide3DObjectsFromExplorer", 	# "Show3DObjectsInExplorer",
 	# "DisableThumbnails",          # "EnableThumbnails",
 	# "DisableThumbsDB",            # "EnableThumbsDB",
 
@@ -160,18 +164,18 @@ $tweaks = @(
 	"UninstallOneDrive",            # "InstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
-	"UninstallWindowsStore",      	# "InstallWindowsStore",
+	#"UninstallWindowsStore",      	# "InstallWindowsStore",
 	"DisableXboxFeatures",        	# "EnableXboxFeatures",
 	"DisableAdobeFlash",            # "EnableAdobeFlash",
 	# "InstallMediaPlayer", 		# "UninstallMediaPlayer",
 	"UninstallInternetExplorer",  	# "InstallInternetExplorer",
 	"UninstallWorkFolders",       	# "InstallWorkFolders",
-	"InstallLinuxSubsystem",      	# "UninstallLinuxSubsystem",
+	#"InstallLinuxSubsystem",      	# "UninstallLinuxSubsystem",
 	# "InstallHyperV",              # "UninstallHyperV",
 	"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
 	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
 	"InstallPDFPrinter",			# "UninstallPDFPrinter",
-	"UninstallXPSPrinter",        # "InstallXPSPrinter",
+	#"UninstallXPSPrinter",        # "InstallXPSPrinter",
 	# "RemoveFaxPrinter",           # "AddFaxPrinter",
 
 	### Server Specific Tweaks ###
@@ -209,6 +213,21 @@ Function InstallTitusProgs {
 Function InstallAdobe {
 	Write-Output "Installing Adobe Acrobat Reader"
 	choco install adobereader -y
+}
+
+Function InstallKeepassXC {
+	Write-Output "Installing KeepassXC"
+	choco install keepassxc -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallVLC {
+	Write-Output "Installing VLC"
+	choco install vlc -y
 }
 
 Function InstallJava {
