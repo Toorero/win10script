@@ -154,6 +154,8 @@ $tweaks = @(
 	# "Hide3DObjectsFromExplorer", 	# "Show3DObjectsInExplorer",
 	# "DisableThumbnails",          # "EnableThumbnails",
 	# "DisableThumbsDB",            # "EnableThumbsDB",
+	"AddWSLHere",
+	"AddTerminalHere",
 
 	### Application Tweaks ###
 	"DisableOneDrive",              # "EnableOneDrive",
@@ -1900,6 +1902,53 @@ Function EnableThumbsDB {
 	Write-Output "Enable creation of Thumbs.db..."
 	Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbnailCache" -ErrorAction SilentlyContinue
 	Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbsDBOnNetworkFolders" -ErrorAction SilentlyContinue
+}
+
+Function EnableWSLHere {
+       #TODO: fetch WSL icon
+       EnableHereCommand -Id "Subsys" -CMD 'wsl --cd "%V"' -Icon_Path "$env:APPDATA\OpenHere\wsl.ico" -Description "WSL here"
+}
+Function DisableWSLHere {
+       DisableHereCommand -Id "Subsys"
+       #Remove-Item -Path "$env:APPDATA\OpenHere\wsl.ico"
+}
+
+Function EnableWTHere {
+       FetchHereIcon -URL "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal.ico" -Id "wt"
+       EnableHereCommand -Id "WTerminal" -CMD 'wt -d "%V"' -Icon_Path "$env:APPDATA\OpenHere\wt.ico" -Description "Terminal here"
+}
+Function DisableWTHere {
+       DisableHereCommand -Id "WTerminal"
+       Remove-Item -Path "$env:APPDATA\OpenHere\wt.ico"
+}
+
+Function EnableCMDHere {
+       FetchHereIcon -URL "https://raw.githubusercontent.com/microsoft/terminal/main/res/console.ico" -Id "cmd"
+       EnableHereCommand -Id "CMD" -CMD 'cmd.exe /s /k pushd "%V"' -Icon_Path "todo" -Description "CMD here"
+}
+Function DisableCMDHere {
+       DisableHereCommand -Id "CMD"
+       Remove-Item -Path "$env:APPDATA\OpenHere\cmd.ico"
+
+       $Origin = "HKLM:\SOFTWARE\Classes\Directory"
+
+       New-Item -Path "$Origin\Background\shell" -Name "$Id" -Value "$Description"
+       New-ItemProperty -Path "$Origin\Background\shell\$Id" -Name "Icon" -Value "$Icon_Path" -PropertyType "String"
+
+       New-ItemProperty -Path "$Origin\shell\$Id" -Name "Icon" -Value "$Icon_Path" -PropertyType "String"
+       New-Item -Path "$Origin\shell\$Id" -Name "command" -Value "$CMD"
+
+Function DisableHereCommand($Id) {
+       $Origin = "HKLM:\SOFTWARE\Classes\Directory"
+
+       Remove-Item -Path "$Origin\Background\shell\$Id" -Recurse
+       Remove-Item -Path "$Origin\shell\$Id" -Recurse
+}
+
+Function FetchHereIcon($URL, $Id) {
+       New-Item -ItemType Directory -Force -Path "$env:APPDATA\OpenHere"
+       $client = new-object System.Net.WebClient
+       $client.DownloadFile("$URL", "$env:APPDATA\OpenHere\$Id.ico")
 }
 
 
