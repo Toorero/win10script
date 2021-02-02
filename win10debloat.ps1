@@ -1929,7 +1929,9 @@ Function EnableCMDHere {
 Function DisableCMDHere {
        DisableHereCommand -Id "CMD"
        Remove-Item -Path "$env:APPDATA\OpenHere\cmd.ico"
+}
 
+Function EnableHereCommand($Id) {
        $Origin = "HKLM:\SOFTWARE\Classes\Directory"
 
        New-Item -Path "$Origin\Background\shell" -Name "$Id" -Value "$Description"
@@ -1937,6 +1939,7 @@ Function DisableCMDHere {
 
        New-ItemProperty -Path "$Origin\shell\$Id" -Name "Icon" -Value "$Icon_Path" -PropertyType "String"
        New-Item -Path "$Origin\shell\$Id" -Name "command" -Value "$CMD"
+}
 
 Function DisableHereCommand($Id) {
        $Origin = "HKLM:\SOFTWARE\Classes\Directory"
