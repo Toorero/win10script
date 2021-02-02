@@ -154,8 +154,8 @@ $tweaks = @(
 	# "Hide3DObjectsFromExplorer", 	# "Show3DObjectsInExplorer",
 	# "DisableThumbnails",          # "EnableThumbnails",
 	# "DisableThumbsDB",            # "EnableThumbsDB",
-	"AddWSLHere",
-	"AddTerminalHere",
+	"EnableWSLHere",		# "DisableWSLHere",
+	"EnableWTHere",			# "DisableWTHere",
 
 	### Application Tweaks ###
 	"DisableOneDrive",              # "EnableOneDrive",
